@@ -46,7 +46,7 @@ function sanitizeString(str){
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(process.env.PORT)
+    await fastify.listen(process.env.PORT,process.env.IP)
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
