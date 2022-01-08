@@ -51,7 +51,7 @@ a {
   text-align: center;
 }
 
-.container2345 {
+.mainBodyWithHeader {
   position: relative;
   right: 0%;
   width: 85%;
@@ -74,20 +74,18 @@ a {
   justify-content: space-between;
 }
 
-.conteinerX {
+.siteName {
   position: relative;
   height: 35%;
-  width: 15%;
+  width: 30%;
   background-color: white;
   top: 0%;
-  /* margin-left: 60%; */
-  /* margin-top: 0.5%; */
   margin-right: 2%;
   color: black;
   text-align: center;
 }
 
-.container345 {
+.mainBody {
   position: relative;
   max-width: 100%;
   min-width: 100%;
@@ -97,7 +95,7 @@ a {
   display: flex;
 }
 
-.container35 {
+.centralArea {
   position: relative;
   width: 70%;
   height: 100%;
@@ -105,7 +103,7 @@ a {
   display: flex;
 }
 
-.container3 {
+.aboutEarth {
   position: relative;
   width: 100%;
   min-height: 10%;
@@ -151,7 +149,7 @@ a {
   padding-left: 20px;
 }
 
-.conteinerY {
+.goodbye {
   position: relative;
   height: 35%;
   width: 20%;
