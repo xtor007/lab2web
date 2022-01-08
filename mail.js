@@ -11,11 +11,11 @@ const transporter = nodeMailer.createTransport({
   }
 })
 
-const mailer = message => {
+let sendMail = function(message,callback) {
   transporter.sendMail(message, (err,info) => {
-    if (err) return console.log(err)
-    //console.log(info)
+    callback(err)
   })
 }
 
-module.exports = mailer
+
+module.exports={sendMail}

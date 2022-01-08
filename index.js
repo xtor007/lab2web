@@ -16,12 +16,11 @@ fastify.register(fastifyStatic, {
 // })
 
 fastify.post('/form', async (request, reply) => {
-  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(request.body.email)) {
-    return reply.send('error email')
-  }
   if (!request.body.name || request.body.name === '') {
-    console.log("not work")
-    return reply.send('error name')
+    return reply.redirect('/?message=Invalid%20name')
+  }
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(request.body.email)) {
+    return reply.redirect('/?message=Invalid%20email')
   }
   const message = {
     from: process.env.EMAIL_FROM,
@@ -29,9 +28,14 @@ fastify.post('/form', async (request, reply) => {
     subject: process.env.SUBJECT,
     text: `name: ${request.body.name}\nemail: ${request.body.email}`
   }
-  mailer(message)
-  console.log("work")
-  reply.redirect('/')
+  mailer.sendMail(message,(err) => {
+    if (err){
+      return reply.redirect('/?message='+encodeURI(err))
+    }   else {
+      return reply.redirect('/?message=Email%20was%20sent')
+    }
+  })
+
 })
 
 // Run the server!
