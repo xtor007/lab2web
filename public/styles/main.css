@@ -1,0 +1,161 @@
+* {
+  font-family: helvetica, suns-sans-serif;
+  outline: none;
+  /* overflow-y: auto; */
+  /* display: block; */
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+p {
+  text-indent: 20px;
+}
+
+h5 {
+  text-align: center;
+  text-indent: 20px;
+}
+
+img[alt*="Planets"] {
+  width: 447px;
+  height: 264px;
+}
+
+a {
+  color: black;
+}
+
+.container2 p {
+  width: 70%;
+}
+
+.footer ol {
+  width: 70%;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 70%;
+  display: flex;
+}
+
+.leftAside {
+  position: relative;
+  width: 15%;
+  background-color: green;
+  min-height: 100%;
+  color: black;
+  text-align: center;
+}
+
+.mainBodyWithHeader {
+  position: relative;
+  right: 0%;
+  width: 85%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.header {
+  position: relative;
+  max-width: 100%;
+  background-color: #ADFF2F;
+  min-height: 20%;
+  color: black;
+  padding-left: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.siteName {
+  position: relative;
+  height: 35%;
+  width: 30%;
+  background-color: white;
+  top: 0%;
+  margin-right: 2%;
+  color: black;
+  text-align: center;
+}
+
+.mainBody {
+  position: relative;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 80%;
+  bottom: 0%;
+  flex-direction: row;
+  display: flex;
+}
+
+.centralArea {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.aboutEarth {
+  position: relative;
+  width: 100%;
+  min-height: 10%;
+  background-color: #00FF00;
+  color: red;
+  text-align: right;
+}
+
+.mainText {
+  position: relative;
+  max-width: 100%;
+  min-height: 90%;
+  bottom: 0%;
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightAside {
+  position: relative;
+  right: 0%;
+  width: 30%;
+  min-height: 100%;
+  background-color: green;
+  color: black;
+  text-align: center;
+}
+
+.footer {
+  position: relative;
+  max-width: 100%;
+  min-height: 30%;
+  background-color: #ADFF2F;
+  color: black;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.goodbye {
+  position: relative;
+  height: 35%;
+  width: 20%;
+  background-color: white;
+  /* margin-left: 0.5%;
+  margin-top: 10%; */
+  color: black;
+  text-align: center;
+}
