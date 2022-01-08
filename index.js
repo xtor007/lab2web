@@ -4,6 +4,9 @@ const path = require('path')
 const mailer = require('./mail')
 require('dotenv').config()
 
+var server_port = process.env.PORT || 8000;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+
 fastify.register(require('fastify-formbody'))
 
 fastify.register(fastifyStatic, {
@@ -46,7 +49,7 @@ function sanitizeString(str){
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(process.env.PORT,process.env.IP)
+    await fastify.listen(server_port,server_host)
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
