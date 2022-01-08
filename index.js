@@ -26,17 +26,22 @@ fastify.post('/form', async (request, reply) => {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
     subject: process.env.SUBJECT,
-    text: `name: ${request.body.name}\nemail: ${request.body.email}`
+    text: `name: ${sanitizeString(request.body.name)}\nemail: ${request.body.email}`
   }
   mailer.sendMail(message,(err) => {
     if (err){
-      return reply.redirect('/?message='+encodeURI(err))
+      return reply.redirect(`/?message=${encodeURI(err)}`)
     }   else {
       return reply.redirect('/?message=Email%20was%20sent')
     }
   })
 
 })
+
+function sanitizeString(str){
+  str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim,"");
+  return str.trim();
+}
 
 // Run the server!
 const start = async () => {
