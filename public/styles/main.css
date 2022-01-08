@@ -35,7 +35,7 @@ a {
   width: 70%;
 }
 
-.container12345 {
+.main {
   position: relative;
   width: 100%;
   min-height: 70%;
@@ -60,13 +60,12 @@ a {
   display: flex;
 }
 
-.container2 {
+.header {
   position: relative;
   max-width: 100%;
   background-color: #ADFF2F;
   min-height: 20%;
   color: black;
-  /* padding-top: 10%; */
   padding-left: 10px;
   text-align: left;
   display: flex;
